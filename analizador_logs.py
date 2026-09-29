@@ -1,28 +1,3 @@
-"""
-Analizador de logs - Semana 2 KODIGO (IA-first mindset)
-
-Uso:
-    python analizador_logs.py              -> abre selector de archivos (o pide la ruta)
-    python analizador_logs.py ruta.txt     -> analiza directamente ese archivo
-
-REGLAS DE VALIDACION (decisiones del desarrollador, no de la IA):
-  R1. Una linea vacia se ignora (no cuenta como evento ni como error).
-  R2. Una linea es EVENTO si empieza con [INFO], [WARNING] o [ERROR]
-      en MAYUSCULAS y con corchetes. Cualquier otra cosa es MALFORMADA.
-  R3. Despues del nivel, si no hay mensaje (ni fecha ni texto) -> MALFORMADA
-      (incompleta).
-  R4. Fecha: formato estricto AAAA-MM-DD y que exista en el calendario.
-        - Sin fecha            -> se cuenta como evento, marcado "sin fecha".
-        - Fecha mal escrita o
-          imposible (2025-13-45) -> se cuenta como evento, marcado "fecha invalida".
-      Razon: el evento sigue siendo util (tiene severidad y mensaje);
-      lo que falla es solo la marca de tiempo.
-  R5. Solo fecha y nada mas (sin mensaje) -> MALFORMADA (incompleta).
-
-Casos borde NO manejados a proposito: logs multilinea (stack traces),
-horas (HH:MM:SS), niveles en minuscula o distintos (DEBUG, FATAL).
-"""
-
 import re
 import sys
 from collections import Counter
