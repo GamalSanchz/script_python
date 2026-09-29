@@ -1,0 +1,12 @@
+[INFO] 2025-01-10 User logged in
+[ERROR] 2025-01-10 Failed to connect to database
+[WARNING] Invalid password attempt
+[INFO] 2025-13-45 Fecha imposible
+[ERROR] 2025-01-11
+User logged out sin nivel
+[DEBUG] 2025-01-12 Nivel no soportado
+[info] 2025-01-12 nivel en minuscula
+
+INFO 2025-01-12 sin corchetes
+[WARNING] 2025-1-12 fecha sin ceros
+[ERROR]
